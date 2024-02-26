@@ -10,7 +10,7 @@ function ham() {
 
 myNum = document.querySelectorAll('.count')
 
-let speed = 100;
+let speed = 2;
 let x=1
 let isNotRun=true
 myNum.forEach( (myCount) => {
@@ -32,14 +32,15 @@ myNum.forEach( (myCount) => {
             setTimeout(() => {updateNumber()}, 5)
         }
      }
-     isNotRun=false
-    window.addEventListener('scroll',function(){
-        x = window.scrollY;
-        if(x>1840 && x<2286)
-        {
-            updateNumber(); 
-        }
-        console.log("my scrool is",x);
+     updateNumber()
+    //  isNotRun=false
+    // window.addEventListener('scroll',function(){
+    //     x = window.scrollY;
+    //     if(x>1840 && x<2286)
+    //     {
+    //         updateNumber(); 
+    //     }
+    //     console.log("my scrool is",x);
         
-    })
+    // })
 })
