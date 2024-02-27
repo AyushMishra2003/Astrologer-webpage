@@ -70,7 +70,7 @@ nav li a:hover{
 
   .dropdown-content a {
     float: none;
-    color: #000000;
+    color: black;
     padding: 0.4rem 2rem;
     text-decoration: none;
     display: block;
@@ -91,7 +91,10 @@ nav li a:hover{
     font-size: 1rem;
     font-weight: 900;
   }
-
+.fa-whatsapp{
+    font-size: 2rem;
+    color: #2AB13F;
+}
 /* BACKGROUND IMAGE CSS */
 .bgcimage{
      background-image: url(./Assest/image/bgcphoto.jpeg);
@@ -327,6 +330,9 @@ main{
     color: white;
     transition: 1s;
 }
+.know-more {
+    text-decoration: none;
+}
 .know-more:hover{
     color: red;
 }
@@ -428,12 +434,18 @@ main{
     border: 2px solid rebeccapurple;
 }
 .servicecards{
+    display: flex;
+    gap: 2rem;
     position: absolute;
     bottom: -1%;
-    display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 200px ;
-    grid-column-gap: 50px;
+}
+.servicecard1{
+    display: flex;
+    gap: 2rem;
+}
+.servicecard2{
+    display: flex;
+    gap: 2rem;
 }
 .servicecard{
     padding: 2rem;
@@ -463,73 +475,93 @@ main{
 /* RESPONSE FOR DIFFERENT SCREEN */
 @media only screen and (max-width:1024px){
   .ganeshjimg{
-    width: 47rem;
+    width: 100vw;
   }
   .servicecard{
-    border: 2px solid pink;
-    width: 10rem;
     height: 11rem;
+    width: 10.5rem;
+    text-align: center;
+
   }
   .servicecardlogo{
     top: -35%;
   }
   .servicecards{
-  grid-template-columns: 300px 300px ;
-  grid-template-rows: 200px 200px ;
-  bottom: -10%;
-  right: 0%;
-  grid-column-gap: 0px;
-  /* grid-row-gap: 70px; */
- }
+    gap: 0.7rem;
+  }
+  .servicecard1{
+    gap: 0.4rem;
+  }
+  .servicecard2{
+    text-align: center;
+    gap: 0.1rem;
+  }
  }
 @media only screen and (max-width:768px){
   .ganeshjimg{
-    width: 26rem;
+    width: 100vw;
   }
   .servicecards{
     gap: 0rem;
   }
-  /* .servicecard{
-    flex-direction: column;
-    width: 5rem;
-    height: 10rem;
-    overflow: hidden;
-  } */
-  .servicecards{
-    grid-template-columns: 200px 200px ;
-    grid-template-rows: 200px 200px ;
-    bottom: -30%;
+  .servicecard{
+    width: 8rem;
+    height: 5rem;
+    object-fit: cover;
+    bottom: -10%;
+  }
+  .servicecardpara{
+    display: none;
   }
   .servicecardlogo{
     width: 3rem;
     bottom: 0%;
-    top: 10%;
+    top: -20%;
+  }
+  .servicecards{
+    gap: 5rem;
+  }
+  .servicecard1{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .servicecard2{
+    flex-direction: column;
+    gap: 2rem;
   }
 }
 @media only screen and (max-width:425px){
-    .ganeshjimg{
-        width: 23rem;
-    }
     .servicecard{
         width: 7rem;
-        height: 7rem;
-        overflow: hidden;
+        height: 6rem;
     }
     .servicecards{
-        grid-template-columns: 200px  200px ;
-        grid-template-rows: 150px 150px;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        bottom:-30% ;
-        right: -20%
+        bottom:-8%;
+    }
+    .servicecardpara{
+        display: none;
+    }
+    .servicecard1{
+        gap: 0.2rem;
+    }
+    .servicecard2{
+        gap: 0.2rem;
     }
 }
 @media only screen and (max-width:375px){
     .ganeshjimg{
-        width: 21rem;
+        width: 100vw;
+    }
+    .servicecards{
+        gap: 1rem;
     }
     .servicecard{
-        width: 2rem;
+        width: 7rem;
+        height: 3rem;
+        object-fit: cover;
+    }
+    .servicecard1{
+        flex-direction: column;
     }
     .servicecards{
         left: 10%;
@@ -977,4 +1009,19 @@ footer{
     height: 7rem;
     object-fit: cover;
     border-radius: 100%;
+}
+/* RESPONSE CARD */
+@media only screen and (max-width:425px){
+  .owl-carousel{
+    width: 13rem;
+    overflow: hidden;
+  }
+  .item{
+    width: 15rem;
+  }
+}
+@media only screen and (max-width:375px){
+   .item{
+    width: 12rem;
+   }
 }
