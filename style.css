@@ -4,6 +4,8 @@
     box-sizing: border-box;
     font-family: "Work Sans", sans-serif;
 }
+/* CSS BODY TAG */
+
 body{
     display: flex;
     flex-direction: column;
@@ -14,10 +16,23 @@ body{
     overflow-x: hidden;
     /* gap: 0.5rem; */
 }
+/* SCROLL BAR */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(194, 180, 180, 0.518);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: red;
+    border-radius: 10px;
+}
+/* HEADER CSS */
+
 .sidebar{
     display: flex;
 }
-/* HEADER CSS */
 header{
     display: flex;
     align-items: center;
@@ -65,7 +80,7 @@ nav li a:hover{
     display: none;
     position: absolute;
     background-color: #000000;
-    width: 13rem;
+    width: 10rem;
   }
 
   .dropdown-content a {
