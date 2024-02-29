@@ -16,11 +16,7 @@ let isNotRun=true
 myNum.forEach( (myCount) => {
     // isRun=true
     let end = myCount.dataset.count;
-    // console.log(typeof target_count);
     let start = parseInt(myCount.innerText);
-    // console.log(typeof init_count);
-    // console.log(target_count)
-    
     let increment_num = Math.floor(end / speed);
     
     const updateNumber = () => {
@@ -33,14 +29,4 @@ myNum.forEach( (myCount) => {
         }
      }
      updateNumber()
-    //  isNotRun=false
-    // window.addEventListener('scroll',function(){
-    //     x = window.scrollY;
-    //     if(x>1840 && x<2286)
-    //     {
-    //         updateNumber(); 
-    //     }
-    //     console.log("my scrool is",x);
-        
-    // })
 })
